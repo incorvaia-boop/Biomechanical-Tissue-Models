@@ -1,31 +1,19 @@
-# Biomechanical Modelling of Human Diaphragmatic Tissue
+# Biomechanical Analysis of Human Diaphragmatic Tissue
 
-This repository contains MATLAB scripts developed to model and analyze the non-linear viscoelastic behavior of native and decellularized human diaphragmatic tissue under uniaxial tensile and stress-relaxation testing.
+MATLAB implementation for analyzing uniaxial tensile tests and stress-relaxation experiments on human diaphragmatic tissue (native vs. decellularized).
 
----
+## Overview
+This repository contains the numerical implementation used to model the non-linear viscoelastic response of human diaphragmatic tissue subjected to cyclic mechanical testing and stress relaxation.
 
-## 🎯 Project Overview
-The objective of this study is to characterize the mechanical properties of human diaphragmatic tissue and evaluate the impact of different decellularization protocols (SDS, Tergitol™, SDC) on its mechanical response.
+The main focus of the code is:
+* Modelling non-linear elastic behavior combined with internal viscous variables ($\epsilon_v$).
+* Simulating stress-strain hysteresis and preconditioning effects over consecutive loading cycles.
+* Fitting stress relaxation data using a Generalized Maxwell Model to identify the asymptotic equilibrium stress ($E_{eq}$).
 
-### Key Features Implemented in MATLAB:
-- **Non-linear Viscoelasticity:** Implementation of constitutive equations combining non-linear elastic equilibrium with internal viscous variable dynamics ($\epsilon_v$).
-- **Cyclic Loading & Preconditioning:** Simulation of stress-strain hysteresis loops and energy dissipation stabilization across consecutive loading cycles.
-- **Generalized Maxwell Model:** Time-dependent stress-relaxation analysis ($\sigma(t)$ decay and asymptotic equilibrium stress $E_{eq}$).
+## Contents
+* `src/`: MATLAB scripts (`.m`) for parameter identification, numerical simulation, and data plotting.
+* `MECCANICA_DEI_TESSUTI-5.pdf`: Full report detailing the theoretical background, mathematical formulation, and experimental results.
 
----
-
-## 💻 Code Development & Authorship
-* **MATLAB Scripts (`.m`):** Developed independently for data fitting, parameter identification ($E_0^{eq}$, $E_1^{eq}$, $\beta$, $\eta$, $k_{eq}$), and automated plotting of stress-strain and relaxation curves.
-* **Documentation (`.pdf`):** Full academic report/thesis detailing the theoretical framework, mathematical formulation, and experimental discussion.
-
----
-
-## 📚 Attribs & Literature
-* Theoretical background, experimental setups, and decellularization data were adapted from reference academic literature on tissue engineering and biomechanics.
-* Schematic diagrams of viscoelastic models (Maxwell & Kelvin-Voigt) were rendered using *ElViS-Simulator*.
-
----
-
-## 👤 Author
-**Davide Incorvaia**  
-*Biomedical / Mechanical Engineering Student*
+## Notes & Acknowledgments
+* Experimental data and decellularization protocols (SDS, Tergitol™, SDC) originate from background academic literature in tissue engineering.
+* Viscoelastic schematic figures were drawn using *ElViS-Simulator*.
